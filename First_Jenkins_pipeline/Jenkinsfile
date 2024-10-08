@@ -1,0 +1,13 @@
+pipeline{
+    agent any
+    stages {
+        stage('Running some test commands'){
+            steps{
+                sh "pwd"
+                sh "ls -ltrh"
+                sh "df -h"
+                sh 'echo "Good Job, The Pipeline is working fine"'
+            }
+        }
+    }
+}

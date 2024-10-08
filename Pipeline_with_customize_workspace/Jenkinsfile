@@ -1,0 +1,17 @@
+pipeline{
+    agent {
+        node {
+            label "deploy-client"
+            customWorkspace "/home/ec2-user/<USERNAME>" // This path should already be present in the node
+        }
+    }
+    stages{
+        stage('Deploy Client') {
+            steps{
+                sh 'npm install'
+                sh 'ls -ltrh'
+                echo 'Running in deploy-client in the mentioned workspace'
+            }
+        }
+    }
+}

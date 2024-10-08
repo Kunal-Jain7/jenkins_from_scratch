@@ -1,0 +1,13 @@
+pipeline{
+    agent {
+        label "deploy-client"
+    }
+    stages{
+        stage('Deploy Commands') {
+            steps {
+                sh 'echo "Deploying client..."'
+                sh "ls -ltrh"
+            }
+        }
+    }
+}

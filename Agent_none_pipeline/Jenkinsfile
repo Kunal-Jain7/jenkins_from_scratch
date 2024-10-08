@@ -1,0 +1,12 @@
+pipeline{
+    agent none
+    stages{
+        stage('Commands'){
+            steps{
+                sh "pwd"
+                sh "ls -ltrh"
+                echo "Your Pipeline is working fine with agent NONE"
+            }
+        }
+    }
+}
