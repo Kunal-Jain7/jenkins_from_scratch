@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages{
+        stage('Commands'){
+            steps{
+                script{
+                    def name = "KUNAL"
+
+                    if(name == "KUNAL")
+                        println("Hi ${name}")
+                    else
+                        println("Hi there, Don't recognize your name")
+                    
+                    sleep 2
+                    echo "end of script"
+                }
+            }
+        }
+    }
+}
