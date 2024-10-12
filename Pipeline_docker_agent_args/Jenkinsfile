@@ -1,0 +1,15 @@
+pipeline{
+    agent {
+        docker {
+            image 'maven:3.5.3-jdk-10-slim'
+            args '-e deployEnv=dops'
+        }
+    }
+    stages {
+        stage('Deploy in Env') {
+            steps {
+                sh 'echo $deployEnv'
+            }
+        }
+    }
+}
